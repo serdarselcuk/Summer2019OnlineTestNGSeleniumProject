@@ -44,7 +44,7 @@ public class TestNGPractice {
     public void verifyHeadingIsDisplayed(){
         WebDriver driver = BrowserFactory.getDriver("chrome");
         driver.get("http://practice.cybertekschool.com/");
-        //if there is no element with this locator, we will get NoSuchElementException
+        //if there is no element with this locator, we will getDriver NoSuchElementException
         //and our program will stop on the findElement line
         WebElement heading = driver.findElement(By.xpath("//span[text()='Test Automation Practice']"));
         //to make sure that element is visible to user
@@ -52,7 +52,7 @@ public class TestNGPractice {
         //we need to make sure element is visible
         //Element is not visible -- will be printed it element is there, but not visible
         //assertTrue - method that checks if something is true
-        //if it's false, you will get exception
+        //if it's false, you will getDriver exception
         //.isDisplayed() return true or false
         //if it returns true - that means element is visible
         //if this method returns false - element is not visible

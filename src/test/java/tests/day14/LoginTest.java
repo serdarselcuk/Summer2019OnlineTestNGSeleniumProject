@@ -14,19 +14,19 @@ public class LoginTest extends TestBase {
     public void test1(){
         //read url value from the properties file
         String url = ConfigurationReader.getProperty("url");
-        //Driver.get() --> will return webdriver object
-        //and then we can call webdriver methods like get(), findElement()....
-//        WebDriver driver = Driver.get();
-        Driver.get().get(url);
+        //Driver.getDriver() --> will return webdriver object
+        //and then we can call webdriver methods like getDriver(), findElement()....
+//        WebDriver driver = Driver.getDriver();
+        Driver.getDriver().get(url);
         //print page title
-        System.out.println(Driver.get().getTitle());
+        System.out.println(Driver.getDriver().getTitle());
         BrowserUtils.wait(2);
-        Driver.close();
+        Driver.closeDriver();
     }
 
     @Test
     public void test2(){
-        System.out.println(Driver.get().getTitle());
+        System.out.println(Driver.getDriver().getTitle());
         BrowserUtils.wait(2);
     }
 }

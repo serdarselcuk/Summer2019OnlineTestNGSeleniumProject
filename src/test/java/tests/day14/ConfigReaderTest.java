@@ -21,7 +21,7 @@ public class ConfigReaderTest {
     public void test1(){
         String expectedBrowser = "chrome";
         //we write keys in "key" as a string
-        //as return, you will get value
+        //as return, you will getDriver value
         //key=value
         //property name = value
         //we don't change property names, we change values

@@ -23,7 +23,7 @@ public class EnterTextPractice2 {
         input.sendKeys("random@email.com", Keys.ENTER);
         WebElement confirmationMessage = driver.findElement(By.name("confirmation_message"));
         String expectedMessage = "Your e-mail's been sent!";
-        //to get the text from element
+        //to getDriver the text from element
         String actualMessage = confirmationMessage.getText();
         if(expectedMessage.equals(actualMessage)){
             System.out.println("Test passed");

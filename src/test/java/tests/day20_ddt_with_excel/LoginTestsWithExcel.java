@@ -10,8 +10,6 @@ import utils.BrowserUtils;
 import utils.Driver;
 import utils.ExcelUtil;
 
-import java.util.Map;
-
 public class LoginTestsWithExcel extends TestBase {
 
     //username	password	firstname	lastname	result
@@ -29,7 +27,7 @@ public class LoginTestsWithExcel extends TestBase {
             loginPage.login(username, password);
             //put here wait for title to be "Dashboard"
             BrowserUtils.waitForPageTitle("Dashboard");
-            Assert.assertEquals(Driver.get().getTitle(), "Dashboard");
+            Assert.assertEquals(Driver.getDriver().getTitle(), "Dashboard");
             extentTest.pass("Login test passed for user "+username);
         }
     }
@@ -55,7 +53,7 @@ public class LoginTestsWithExcel extends TestBase {
 //        //keys are represented by column names
 //        //like in properties file key=value
 //        for (Map<String, String> map : qa2.getDataList()) {
-//            System.out.println(map.get("username"));
+//            System.out.println(map.getDriver("username"));
 //        }
 //    }
 

@@ -28,8 +28,8 @@ public class LoginPage extends BasePage{
     public LoginPage() {
         //it's mandatory if you want to use @FindBy annotation
         //this means LoginPage class
-        //Driver.get() return webdriver object
-        PageFactory.initElements(Driver.get(), this);
+        //Driver.getDriver() return webdriver object
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     /**

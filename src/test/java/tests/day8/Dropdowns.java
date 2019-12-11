@@ -42,7 +42,7 @@ public class Dropdowns {
         select.selectByVisibleText("Option 2");
         BrowserUtils.wait(2);
         //how to verify that option 2 is selected
-        //select.getFirstSelectedOption() - to get selected option/this is what is selected
+        //select.getFirstSelectedOption() - to getDriver selected option/this is what is selected
         Assert.assertEquals(select.getFirstSelectedOption().getText(), "Option 2");
     }
 

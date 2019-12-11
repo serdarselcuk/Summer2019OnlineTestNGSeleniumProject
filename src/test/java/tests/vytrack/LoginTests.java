@@ -24,12 +24,12 @@ public class LoginTests extends TestBase {
         //provide username and password
         loginPage.login("storemanager85", "UserUser123");
         //verification stage
-        //Driver.get() = driver same things
-        //Driver.get() returns webdriver object
-        WebDriverWait wait = new WebDriverWait(Driver.get(), 10);
+        //Driver.getDriver() = driver same things
+        //Driver.getDriver() returns webdriver object
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
         //this is an explicit wait
         //it waits until title is 'Dashboard'
         wait.until(ExpectedConditions.titleIs("Dashboard"));
-        Assert.assertEquals(Driver.get().getTitle(), "Dashboard");
+        Assert.assertEquals(Driver.getDriver().getTitle(), "Dashboard");
     }
 }

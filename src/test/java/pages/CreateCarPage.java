@@ -44,7 +44,7 @@ public class CreateCarPage extends BasePage {
         //locator for checkbox is based on label name
         //label and checkbox are siblings
         String locator = "//label[text()='" + tagName + "']/preceding-sibling::input[@type='checkbox']";
-        WebElement checkBox = Driver.get().findElement(By.xpath(locator));
+        WebElement checkBox = Driver.getDriver().findElement(By.xpath(locator));
         BrowserUtils.waitForVisibility(checkBox, 15);
         BrowserUtils.waitForClickablility(checkBox, 15);
         if (!checkBox.isSelected()) {
@@ -67,7 +67,7 @@ public class CreateCarPage extends BasePage {
         String locator = "//div[@class='select2-result-label' and text()='" + fuelType + "']";
         BrowserUtils.waitForClickablility(fuelTypeElement, 15);
         fuelTypeElement.click();
-        WebElement fuelTypeSelectionElement = Driver.get().findElement(By.xpath(locator));
+        WebElement fuelTypeSelectionElement = Driver.getDriver().findElement(By.xpath(locator));
         BrowserUtils.waitForClickablility(fuelTypeSelectionElement, 15);
         fuelTypeSelectionElement.click();
     }

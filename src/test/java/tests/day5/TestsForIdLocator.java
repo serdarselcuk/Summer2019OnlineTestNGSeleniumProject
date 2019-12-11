@@ -8,7 +8,7 @@ import utils.BrowserFactory;
 public class TestsForIdLocator {
     public static void main(String[] args) {
 //        WebDriver driver = BrowserFactory.getDriver("chrome");
-////        driver.get("http://practice.cybertekschool.com/multiple_buttons");
+////        driver.getDriver("http://practice.cybertekschool.com/multiple_buttons");
 ////        //id="disappearing_button"
 ////        //refresh the page to see that button again
 ////        WebElement button = driver.findElement(By.id("disappearing_button"));
@@ -23,7 +23,7 @@ public class TestsForIdLocator {
 ////        driver.quit();
 
 //        WebDriver driver = BrowserFactory.getDriver(“chrome”);
-//        driver.get(“https://qa2.vytrack.com“);
+//        driver.getDriver(“https://qa2.vytrack.com“);
 //        driver.findElement(By.name(“_username”)).sendKeys(“User24");
 //                driver.findElement(By.name(“_password”)).sendKeys(“UserUser123");
 //                        driver.findElement(By.name(“_submit”)).click();

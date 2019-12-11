@@ -24,14 +24,14 @@ public class SmokeTest extends TestBase {
         loginPage.navigateTo(moduleName, subModuleName);
 
         loginPage.waitUntilLoaderMaskDisappear();
-
+        //wait for page subtitle
         loginPage.waitForPageSubTitle(pageSubTitle);
+
         Assert.assertEquals(loginPage.getPageSubTitle(), pageSubTitle);
 
         extentTest.pass("Verified that page subtitle '" + pageSubTitle + "' is displayed");
 
     }
-
 
 
     @DataProvider(name = "navigationInfo")

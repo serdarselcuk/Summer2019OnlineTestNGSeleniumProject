@@ -79,13 +79,13 @@ public class ExcelUtil {
 
 
     public List<Map<String, String>> getDataList() {
-        // get all columns
+        // getDriver all columns
         List<String> columns = getColumnsNames();
         // this will be returned
         List<Map<String, String>> data = new ArrayList<>();
 
         for (int i = 1; i < rowCount(); i++) {
-            // get each row
+            // getDriver each row
             Row row = workSheet.getRow(i);
             // create map of the row using the column and value
             // column map key, cell value --> map bvalue

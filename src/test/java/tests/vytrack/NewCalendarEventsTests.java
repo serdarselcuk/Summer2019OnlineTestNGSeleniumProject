@@ -11,7 +11,7 @@ public class NewCalendarEventsTests extends TestBase {
     @Test(description = "Verify that page subtitle is equals to 'All Calendar Events'")
     public void test1() {
         //this step is required for every test
-        //otherwise you will get nullpointer exception
+        //otherwise you will getDriver nullpointer exception
         //you must create a test at the beginning
         extentTest = extentReports.createTest("Verify that page subtitle is equals to 'All Calendar Events'");
 

@@ -78,10 +78,10 @@ public class WebTablesPractice {
         //if index = 1, then it's a first row
         //if index = 2, then it's a second row
         //if we don't specify td index, it will take all td elements
-        //in css we use space " ", in xpath // to get to any child
-        //or in css we use ">", in xpath /, to get to direct child
+        //in css we use space " ", in xpath // to getDriver to any child
+        //or in css we use ">", in xpath /, to getDriver to direct child
         //css selector alternative: table[id='table1'] tbody tr:nth-of-type(2) td
-        //if index will exceed table size, you will not get any errors, list will be just empty
+        //if index will exceed table size, you will not getDriver any errors, list will be just empty
         //findElements() doesn't give NoSuchElementException, in any case.
         int index = 1;
         List<WebElement> row = driver.findElements(By.xpath("//table[@id='table1']//tbody//tr[" + index + "]//td"));
@@ -107,7 +107,7 @@ public class WebTablesPractice {
      */
     @Test(description = "Verify that every email contains '@'")
     public void test7() {
-        //get all emails
+        //getDriver all emails
         //td[3] - means third column
         //we are skipping tr, because we need data from all rows
         List<WebElement> emails = driver.findElements(By.xpath("//table[@id='table1']//tbody//td[3]"));

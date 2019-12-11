@@ -31,7 +31,7 @@ public class CssSelectorPractice {
             //and click on every button one by one
             button.click();
             BrowserUtils.wait(1);
-            //get the message after click
+            //getDriver the message after click
             WebElement message = driver.findElement(By.cssSelector("#result"));
             //print a text of that message
             System.out.println(message.getText());

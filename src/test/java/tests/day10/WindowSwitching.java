@@ -42,11 +42,11 @@ public class WindowSwitching {
         BrowserUtils.wait(5);
         //in the selenium every window has an id. That id calls window handle
         //to read window handle we use a method getWindowHandle()
-        //after new window was opened, we can get list of all window id's/window handles
+        //after new window was opened, we can getDriver list of all window id's/window handles
         //list - it's a data structure
         //set it's also a data structure, like list, but it doesn't allow duplicates
         //also, you cannot easily access anything from there
-        //there is no .get() method
+        //there is no .getDriver() method
         //that's why, we need to loop through the set, to read a data from there
         //set can store only unique values
         Set<String> windowHandles = driver.getWindowHandles();

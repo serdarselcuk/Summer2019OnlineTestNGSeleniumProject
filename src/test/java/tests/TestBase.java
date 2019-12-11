@@ -27,6 +27,7 @@ public abstract class TestBase {
     //    Defines a test. You can add logs, snapshots, assign author and categories to a test and its children.
     protected static ExtentTest extentTest;
 
+
     //        <parameter name="test" value="regression"></parameter>
     @BeforeTest
     @Parameters({"test", "env_url"})
@@ -63,13 +64,15 @@ public abstract class TestBase {
     @BeforeMethod
     @Parameters("env_url")
     public void setup(@Optional String env_url) {
+        Driver.intiDriver();//create driver per thread
         String url = ConfigurationReader.getProperty("url");
         //if name parameter was set, then use it
         //if it's null that means it was not set
         if (env_url != null) {
             url = env_url;
         }
-        Driver.get().get(url);
+
+        Driver.getDriver().get(url);
     }
 
     //ITestResult class describes the result of a test. (in TestNG)
@@ -90,7 +93,12 @@ public abstract class TestBase {
         } else if (result.getStatus() == ITestResult.SKIP) {
             extentTest.skip("Test case was skipped : " + result.getName());
         }
-        Driver.close();
+        Driver.closeDriver();
+    }
+
+    @AfterSuite
+    public void afterSuite(){
+        Driver.shutDownDrivers();
     }
 
 

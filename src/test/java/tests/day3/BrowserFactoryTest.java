@@ -5,7 +5,7 @@ import utils.BrowserFactory;
 
 public class BrowserFactoryTest {
     public static void main(String[] args) {
-        //now we can get webdriver like this
+        //now we can getDriver webdriver like this
         //getDriver() method will return webdriver object
         //and we can use reference variable to work with that object
         WebDriver driver = BrowserFactory.getDriver("chrome");
