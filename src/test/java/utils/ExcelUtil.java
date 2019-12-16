@@ -5,10 +5,7 @@ import org.testng.Assert;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ExcelUtil {
     private Sheet workSheet;
@@ -144,6 +141,10 @@ public class ExcelUtil {
 
     public int rowCount() {
         return workSheet.getLastRowNum() + 1;
+    }
+
+    public static void main(String[] args) {
+
     }
 }
 

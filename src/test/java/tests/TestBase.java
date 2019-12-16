@@ -8,6 +8,7 @@ import org.testng.annotations.*;
 import utils.BrowserUtils;
 import utils.ConfigurationReader;
 import utils.Driver;
+import pages.BasePage;
 
 import java.io.IOException;
 
@@ -15,7 +16,7 @@ import java.io.IOException;
 //we will put here only before and after parts
 //In this way before and after methods will be the same
 //Every test class will extend testbase class
-public abstract class TestBase {
+public abstract class TestBase extends BasePage {
 // * ExtentReports itself does not build any reports, but allows reporters to access information, which in
 // * turn build the said reports. An example of building an HTML report and adding information to ExtentX:
 // * ExtentHtmlReporter html = new ExtentHtmlReporter("Extent.html");

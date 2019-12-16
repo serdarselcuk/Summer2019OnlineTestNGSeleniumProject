@@ -32,6 +32,7 @@ public class ConfigurationReader {
     }
 
     public static String getProperty(String key) {
+
         return configFile.getProperty(key);
     }
 

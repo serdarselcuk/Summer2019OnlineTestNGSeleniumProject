@@ -13,6 +13,7 @@ import utils.BrowserUtils;
 import utils.Driver;
 
 import javax.swing.*;
+import java.util.List;
 
 //everything that is in common among pages
 //can go here
@@ -136,6 +137,12 @@ public class BasePage {
 
     public void waitForPageSubTitle(String pageSubtitleText) {
         new WebDriverWait(Driver.get(), 10).until(ExpectedConditions.textToBe(By.cssSelector("h1[class='oro-subtitle']"), pageSubtitleText));
+    }
+    public boolean moduleCorrection(String moduleName){
+        String moduleLocator = ".title.title-level-1";
+        List<WebElement> list = Driver.get().findElements(By.xpath(moduleLocator));
+        return list.contains(moduleName);
+
     }
 
 }
