@@ -3,9 +3,12 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import utils.Driver;
 import utils.ExcelUtil;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,27 +19,24 @@ public class OportunitiesPage extends BasePage {
     @FindBy(css = "#breadcrumb li:nth-of-type(2)")
     public WebElement pageName;
 
-
+    public OportunitiesPage() {
+        //it's mandatory if you want to use @FindBy annotation
+        //this means LoginPage class
+        //Driver.get() return webdriver object
+        PageFactory.initElements(Driver.get(), this);
+    }
     public String getPageText(){
         waitUntilLoaderMaskDisappear();
         return pageName.getText();
     }
-    public  Object[][] opportunityData(){
-        ExcelUtil excel1 =  new ExcelUtil("vytrack_testusers.xlsx","Opportunity");
-        Object[][] excelData = excel1.getDataArray();
-        Object[][] result = new Object[14][2];
+    public boolean correct(){
+        List<WebElement>list1= Driver.get().findElements(By.xpath("//div[@class='responsive-block'][1]/div[1]//label"));
+        List<WebElement>list2= Driver.get().findElements(By.xpath("//div[@class='responsive-block'][1]/div[1]//div[@class='control-label']"));
 
 
-        int i = 0;
-        for (Object[] each   : excelData    ) {
-            result [i][0] = each[0];
-            result[i][1] =Driver.get().findElement(By.cssSelector(".control-group.attribute-row:nth-of-type("+ i +") label")).getText();
-            result[++i][0] = each[1];
-            result[i][1] = Driver.get().findElement(By.cssSelector(" .control-group.attribute-row:nth-of-type("+ (i-1) +") div div")).getText();
-            i++;
-        }
-        return result;
+
     }
+
 
 
 

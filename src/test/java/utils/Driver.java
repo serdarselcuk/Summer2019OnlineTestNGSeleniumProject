@@ -36,6 +36,7 @@ public class Driver {
             }
         }
         //if webdriver object was created - you can use it
+       // driver.manage().deleteAllCookies();
         return driver;
     }
 

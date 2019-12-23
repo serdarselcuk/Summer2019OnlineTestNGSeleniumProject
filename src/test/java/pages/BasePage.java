@@ -140,7 +140,7 @@ public class BasePage {
     }
     public boolean moduleCorrection(String moduleName){
         String moduleLocator = ".title.title-level-1";
-        List<WebElement> list = Driver.get().findElements(By.xpath(moduleLocator));
+        List<WebElement> list = Driver.get().findElements(By.cssSelector(moduleLocator));
         return list.contains(moduleName);
 
     }

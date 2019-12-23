@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Oportunitiy Feature">
+
+<!-- in this case we don't need to specify every class one by one, just include package-->
+    <test name="Vytrack opportunitiesPage tests">
+
+        <packages>
+            <package name="tests.testsOfAAssignment"></package>
+        </packages>
+    </test>
+</suite>
+
+
+
