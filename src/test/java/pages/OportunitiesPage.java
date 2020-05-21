@@ -25,6 +25,7 @@ public class OportunitiesPage extends BasePage {
         //Driver.get() return webdriver object
         PageFactory.initElements(Driver.get(), this);
     }
+
     public String getPageText(){
         waitUntilLoaderMaskDisappear();
         return pageName.getText();
@@ -33,7 +34,7 @@ public class OportunitiesPage extends BasePage {
         List<WebElement>list1= Driver.get().findElements(By.xpath("//div[@class='responsive-block'][1]/div[1]//label"));
         List<WebElement>list2= Driver.get().findElements(By.xpath("//div[@class='responsive-block'][1]/div[1]//div[@class='control-label']"));
 
-
+        return list1 == list2;
 
     }
 
